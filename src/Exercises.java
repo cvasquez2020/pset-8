@@ -12,16 +12,12 @@ public class Exercises {
 		if (values == null || values.length < n || n != (int) n || n <= 0) {
 			return empty;
 		}
-		int toDelete = values.length - (n * 2); //TODO: don't do this 'backwards' method 
-		int currentSize = values.length;
-		for (int i = 0; i < toDelete; i--){
-			values[n + toDelete - 1] = values[n + toDelete];
-			values[currentSize - 1] = "0";
-			currentSize--;
-
+		String[] endsMet = new String[n * 2];
+		for(int i = 0; i < n; i++) {
+			endsMet[i] = values[i];
+			endsMet[n * 2 - 1 - i] = values[values.length - 1 - i];
 		}
-		return values;
-
+		return endsMet;
 	}
 
 	public int difference(int[] numbers) {
