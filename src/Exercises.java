@@ -8,11 +8,11 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
-		String[] empty = {};
+		String[] endsMet = {};
 		if (values == null || values.length < n || n != (int) n || n <= 0) {
-			return empty;
+			return endsMet;
 		}
-		String[] endsMet = new String[n * 2];
+		endsMet = new String[n * 2];
 		for(int i = 0; i < n; i++) {
 			endsMet[i] = values[i];
 			endsMet[n * 2 - 1 - i] = values[values.length - 1 - i];
