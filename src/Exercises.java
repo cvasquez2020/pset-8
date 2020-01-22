@@ -9,6 +9,7 @@ public class Exercises {
 
 	public String[] endsMeet(String[] values, int n) {
 		String[] endsMet = {};
+
 		if (values == null || values.length < n || n != (int) n || n <= 0) {
 			return endsMet;
 		}
@@ -25,6 +26,7 @@ public class Exercises {
 			return -1;
 		}
 		int min = numbers[0];
+
 	    for (int number : numbers) {
 	        if (number < min) {
 	            min = number;
@@ -52,6 +54,7 @@ public class Exercises {
 		}
 
 		double[] biggest = {numbers[0], numbers[numbers.length / 2], numbers[numbers.length - 1]};
+
 		for (double number : biggest) {
 		    if (number > max) {
 		        max = number;
@@ -62,6 +65,7 @@ public class Exercises {
 
 	public String[] middle(String[] values) {
 		String[] middle = {};
+
 		if (values == null || values.length < 3 || values.length % 2 == 0) {
 			return middle;
 		}
@@ -118,6 +122,7 @@ public class Exercises {
 		for (int i = 0; i < numbers.length; i++) {
 			int left = 0;
 			int right = 0;
+
 			for (int o = 0; o < i; o++) {
 				left += numbers[o];
 			}
@@ -133,6 +138,7 @@ public class Exercises {
 
 	public int clumps(String[] values) {
 		int tally = 0;
+
 		if (values == null) {
 			return -1;
 		}
