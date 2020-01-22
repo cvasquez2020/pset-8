@@ -113,8 +113,22 @@ public class Exercises {
 	}
 
 	public boolean balance(int[] numbers) {
-		// write your code here
-
+		if (numbers == null || numbers.length < 2) {
+			return false;
+		}
+		for (int i = 0; i < numbers.length; i++) {
+			int left = 0;
+			int right = 0;
+			for (int o = 0; o < i; o++) {
+				left += numbers[o];
+			}
+			for (int o = i; o < numbers.length; o++) {
+				right += numbers[o];
+			}
+			if (left == right) {
+				return true;
+			}
+		}
 		return false;	// default return value to ensure compilation
 	}
 
