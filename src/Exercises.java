@@ -48,7 +48,7 @@ public class Exercises {
 		}
 		for (int i = 0; i < numbers.length; i++) {
 			if (numbers[i] == 0.0 || numbers[i] < 0) {
-				return -1;
+				return -1.0;
 			}
 		}
 
@@ -62,9 +62,17 @@ public class Exercises {
 	}
 
 	public String[] middle(String[] values) {
-		// write your code here
-
-		return null;	// default return value to ensure compilation
+		String[] middle = {};
+		if (values == null || values.length < 3 || values.length % 2 == 0) {
+			return middle;
+		}
+		for (String word : values) {
+			if (word.isEmpty()) {
+				return middle;
+			}
+		}
+		String[] middleThree = {values[values.length / 2 - 1], values[values.length / 2], values[values.length / 2 + 1]};
+		return middleThree;	// default return value to ensure compilation
 	}
 
 	public boolean increasing(int[] numbers) {
