@@ -100,9 +100,16 @@ public class Exercises {
 	}
 
 	public boolean consecutive(int[] numbers) {
-		// write your code here
-
-		return false;	// default return value to ensure compilation
+		if (numbers == null || numbers.length < 1) {
+			return false;
+		}
+		for (int i = 0; i < numbers.length - 2; i++) {
+			int sum = numbers[i] % 2 + numbers[i + 1] % 2 + numbers[i + 2] % 2;
+			if (sum == 0 || sum == 3) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public boolean balance(int[] numbers) {
