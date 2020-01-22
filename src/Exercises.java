@@ -137,7 +137,7 @@ public class Exercises {
 	}
 
 	public int clumps(String[] values) {
-		int tally = 0;
+		int clumps = 0;
 
 		if (values == null) {
 			return -1;
@@ -149,12 +149,12 @@ public class Exercises {
 		}
 		for (int i = 0; i < values.length - 1; i++) {
 			if (values[i].equals(values[i + 1]) && i == 0) {
-				tally++;
+				clumps++;
 
 			} else if (values[i].equals(values[i + 1]) && !(values[i].equals(values[i - 1]))) {
-						tally++;
+						clumps++;
 			}
 		}
-		return tally;
+		return clumps;
 	}
 }
