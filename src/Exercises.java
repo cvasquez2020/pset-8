@@ -25,7 +25,6 @@ public class Exercises {
 			return -1;
 		}
 		int min = numbers[0];
-
 	    for (int number : numbers) {
 	        if (number < min) {
 	            min = number;
@@ -129,12 +128,27 @@ public class Exercises {
 				return true;
 			}
 		}
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 
 	public int clumps(String[] values) {
-		// write your code here
+		int tally = 0;
+		if (values == null) {
+			return -1;
+		}
+		for (String word : values) {
+			if (word.isEmpty()) {
+				return -1;
+			}
+		}
+		for (int i = 0; i < values.length - 1; i++) {
+			if (values[i].equals(values[i + 1]) && i == 0) {
+				tally++;
 
-		return -1;		// default return value to ensure compilation
+			} else if (values[i].equals(values[i + 1]) && !(values[i].equals(values[i - 1]))) {
+						tally++;
+			}
+		}
+		return tally;
 	}
 }
