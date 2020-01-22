@@ -42,9 +42,23 @@ public class Exercises {
 	}
 
 	public double biggest(double[] numbers) {
-		// write your code here
+		double max = 0;
+		if (numbers == null || numbers.length < 3 || numbers.length % 2 == 0) {
+			return -1.0;
+		}
+		for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] == 0.0 || numbers[i] < 0) {
+				return -1;
+			}
+		}
 
-		return -1;		// default return value to ensure compilation
+		double[] biggest = {numbers[0], numbers[numbers.length / 2], numbers[numbers.length - 1]};
+		for (double number : biggest) {
+		    if (number > max) {
+		        max = number;
+		    }
+		}
+		return max;
 	}
 
 	public String[] middle(String[] values) {
