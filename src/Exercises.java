@@ -123,11 +123,11 @@ public class Exercises {
 			int left = 0;
 			int right = 0;
 
-			for (int o = 0; o < i; o++) {
-				left += numbers[o];
+			for (int u = 0; u < i; u++) {
+				left += numbers[u];
 			}
-			for (int o = i; o < numbers.length; o++) {
-				right += numbers[o];
+			for (int u = i; u < numbers.length; u++) {
+				right += numbers[u];
 			}
 			if (left == right) {
 				return true;
